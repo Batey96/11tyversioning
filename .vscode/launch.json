@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Build site",
+            "program": "${workspaceFolder}/website/node_modules/@11ty/eleventy/cmd.js",
+            "cwd": "${workspaceFolder}/website",
+            "env": {
+                "DOCSSITE_VERSION": "0.1.0",
+                "DOCSSITE_WRITE_VERSION": "false",
+                "DOCSSITE_HISTORY_URL": "http://localhost:8181/history",
+                "DOCSSITE_ROOT_SUBDIR": ""
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Build site to version dir",
+            "program": "${workspaceFolder}/website/node_modules/@11ty/eleventy/cmd.js",
+            "cwd": "${workspaceFolder}/website",
+            "env": {
+                "DOCSSITE_VERSION": "0.1.0",
+                "DOCSSITE_WRITE_VERSION": "true",
+                "DOCSSITE_HISTORY_URL": "http://localhost:8181/history",
+                "DOCSSITE_ROOT_SUBDIR": ""
+            }
+        }
+    ]
+}
